@@ -1,0 +1,62 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Roboto+Condensed:wght@400;700&display=swap");
+
+html {
+  font-size: 100%;
+} /*16px*/
+
+:root {
+  /* colors */
+  --primaryColor: #cdbda3;
+  --secondaryColor: #ff5631;
+  --tertiaryColor: #57cb4c;
+  --fourthColor: #1e1e1e;
+
+  /* fonts  */
+  --headingFont: "Roboto Condensed", Sans-Serif;
+  --bodyFont: "Cabin", Sans-Serif;
+  --small-text: 0.875rem;
+  --extra-small-text: 0.7em;
+  /* rest of the vars */
+  --backgroundColor: #0d0d0d;
+  --textColor: var(--primaryColor);
+  --borderRadius: 1.25rem;
+  --letterSpacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1120px;
+  --fixed-width: 500px;
+  --fluid-width: 90vw;
+  --breakpoint-lg: 992px;
+  --nav-height: 6rem;
+}
+
+body {
+  background: var(--backgroundColor);
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--textColor);
+}
+
+main {
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+}
